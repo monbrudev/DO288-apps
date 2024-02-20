@@ -1,0 +1,217 @@
+    1  exit
+    2  lab cat /usr/lhistory
+    3  history
+    4  cat /usr/share/bash-completion/completions/lab 
+    5  cat ~/.bashrc 
+    6  helm version
+    7  vi ~/.bashrc
+    8  ssh lab@utility
+    9  exit
+   10  lab --refresh
+   11  exit
+   12  exit
+   13  exit
+   14  exit
+   15  lab-configure
+   16  history 
+   17  git config --global "credential.cache" --timeout="36000" 
+   18  git config --global "credential.helper"
+   19  git clone https://github.com/monbrudev/DO288-apps.git
+   20  lab nexus-service start
+   21  cd ~/DO288-apps/nexus3
+   22  git checkout main
+   23  egrep  -i "VOLUME|Nexus|env"  Dockerfile
+   24  echo egrep  -i "VOLUME|Nexus|env"  Dockerfile > ../lab_action.sh 
+   25  source /usr/local/etc/ocp4.config >> ../lab_action.sh 
+   26  cat ../lab_action.sh 
+   27  echo "source /usr/local/etc/ocp4.config" >> ../lab_action.sh 
+   28  cat ../lab_action.sh 
+   29  cat ~/DO288/labs/nexus-service.sh
+   30  ks
+   31  ls
+   32  cd ..
+   33  find . -iname nexus-service.sh
+   34  find . -iname nexus-service
+   35  source /usr/local/etc/ocp4.config
+   36  find . -iname build*
+   37  find . -iname "build" 
+   38  find . -iname "nexus" 
+   39  lab nexus-service start
+   40  git checkout main 
+   41  lab nexus-service start
+   42  ls
+   43  ls -lrt
+   44  ls -lt
+   45  cd nexus3/
+   46  ls
+   47  lab nexus-service start
+   48  cd ..
+   49  lab nexus-service start
+   50  lab nexus-service restart
+   51  lab nexus-service -h
+   52  cd DO288
+   53  ls
+   54  cd labs/
+   55  ls
+   56  cd nexus-service/
+   57  ls
+   58  sh build-nexus-image.sh 
+   59  lab-configure
+   60  source /usr/local/etc/ocp4.config
+   61  sh build-nexus-image.sh 
+   62  lab-configure
+   63  source /usr/local/etc/ocp4.config
+   64  sh build-nexus-image.sh 
+   65  podman build -t nexus3 .
+   66  cd ..
+   67  cd DO288-apps/nexus3/
+   68  podman build -t nexus3 .
+   69  podman login -u ${RHT_OCP4_QUAY_USER} quay.io
+   70  skopeo copy --format v2s1 containers-storage:localhost/nexus3 docker://quay.io/${RHT_OCP4_QUAY_USER}/nexus3
+   71  cp -r ~/DO288/labs/nexus-service/nexus-chart/ ~/
+   72  cd ~
+   73  cd nexus-chart/
+   74  ls
+   75  grep -A1 "kind: DockerImage" ~/nexus-chart/templates/imagestream.yaml
+   76  vim values.yaml 
+   77  grep -B1 -A5 limits: ~/nexus-chart/templates/deployment.yaml
+   78  vim templates/deployment.yaml 
+   79  vim values.yaml 
+   80  vim templates/deployment.yaml 
+   81  vim templates/pvc.yaml 
+   82  oc login -u ${RHT_OCP4_DEoVc_ UlSoEgRi}n  \-
+   83  u- p$ {$R{HRTH_TO_COPC4P_4D_EDVE_VU_SPEARS}S W\O
+   84  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+   85  oc new-project ${RHT_OCP4_DEV_USER}-nexus-service
+   86  podman login -u ${RHT_OCP4_QUAY_USER} quay.io
+   87  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type kubernetes.io/dockerconfigjson
+   88  oc secrets link default quayio --for pull
+   89  echo "nexus3-${RHT_OCP4_DEV_USER}.${RHT_OCP4_WILDCARD_DOMAIN}"
+   90  helm install nexus3 ~/nexus-chart
+   91  vim templates/deployment.yaml 
+   92  helm install nexus3 ~/nexus-chart
+   93  helm install nexus3 ~/nexus-chart -o json 
+   94  helm install nexus3 ~/nexus-chart 
+   95  helm chart list
+   96  helm list
+   97  helm delete nexus3
+   98  helm install nexus3 ~/nexus-chart 
+   99  helm list
+  100  cat /home/student/DO288/labs/nexus-service/oc-new-app.sh
+  101  oc get pods
+  102  helm delete nexus3
+  103  echo "nexus3-${RHT_OCP4_DEV_USER}.${RHT_OCP4_WILDCARD_DOMAIN}"
+  104  vim values.yaml 
+  105  helm install nexus3 ~/nexus-chart 
+  106  vim templates/deployment.yaml 
+  107  helm install nexus3 ~/nexus-chart 
+  108  helm update nexus3 ~/nexus-chart 
+  109  helm --help
+  110  helm upgrade nexus3 ~/nexus-chart 
+  111  vim values.yaml 
+  112  helm upgrade nexus3 ~/nexus-chart 
+  113  oc get pods
+  114  oc get route
+  115  oc logs -f nexus3-5f868c5484-jhkm4
+  116  cat values.yaml 
+  117  pwd
+  118  tree
+  119  cd ..
+  120  cd DO288-apps/nexus3/
+  121  mkdir lab
+  122  cd lab 
+  123  cp -r /home/student/nexus-chart  
+  124  cp -r /home/student/nexus-chart  .
+  125  ls
+  126  cat nexus-chart/
+  127  tree
+  128  history > history.txt
+  129  cat history.txt 
+  130  cd ..
+  131  git status
+  132  git add --all 
+  133  git status
+  134  git switch -c lab/nexus -m 
+  135  git commit -m "nexus lab" 
+  136  git push 
+  137   git push --set-upstream origin lab/nexus
+  138  oc delete project ${RHT_OCP4_DEV_USER}-nexus-service
+  139  skopeo delete docker://quay.io/${RHT_OCP4_QUAY_USER}/nexus3
+  140   lab nexus-service finish
+  141  lab micro-java start
+  142  source /usr/local/etc/ocp4.config
+  143  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  144  oc new-project ${RHT_OCP4_DEV_USER}-micro-java
+  145  cd ~/DO288-apps/micro-java
+  146   git checkout main
+  147  git checkout -b micro-config
+  148  git push -u origin micro-config
+  149  nano src/main/java/com/redhat/training/openshift/hello 
+  150  ls
+  151  cd src/main/java/com/redhat/training/openshift/
+  152  ls
+  153  nano  hello/
+  154  cd hello/
+  155  ls
+  156  nano HelloResource.java 
+  157  cd ..
+  158  ls
+  159  cd ..
+  160  ls
+  161  cd ..
+  162  ls
+  163  cd ..
+  164  ls
+  165  cd ..
+  166  ls
+  167  cd ..
+  168  ls
+  169  cd ..
+  170  ls
+  171  find . -iname pom.xml
+  172  cd ..
+  173  find . -iname pom.xml
+  174  vim pom.xml 
+  175  find . -iname pom.xml
+  176  cd ..
+  177  ls
+  178  cd micro-java/
+  179  ls
+  180  vim pom.xml 
+  181  nano  pom.xml 
+  182  vim src/main/jkube/cm.yml 
+  183  vim src/main/jkube/deployment.yml 
+  184  mvn -DskipTests package oc:build oc:resource
+  185  yq target/classes/META-INF/jkube/openshift
+  186  yq target/classes/META-INF/jkube/openshift/micro-java-deployment.yml 
+  187* cat yq --help
+  188  cat  target/classes/META-INF/jkube/openshift/micro-java-deployment.yml |yq
+  189  yq  -j target/classes/META-INF/jkube/openshift/micro-java-deployment.yml 
+  190  cat   target/classes/META-INF/jkube/openshift/micro-java-deployment.yml
+  191  mvn -DskipTests oc:deploy
+  192  oc status
+  193  oc status --suggest
+  194  oc get all
+  195  ROUTE_URL=$(oc get route \
+micro-java --template='{{.spec.host}}')
+  196  curl ${ROUTURL}/api/hello
+  197  oc get route > micro-java --template='{{.spec.host}}'
+  198  oc get route micro-java
+  199  curl http://micro-java-developer-micro-java.apps.ocp4.example.com/api/hello
+  200  vim src/main/jkube/cm.yml
+  201  git status
+  202  git add --all 
+  203  git status
+  204  git commint -am "Add yaml fragments"
+  205  git commit -am "Add yaml fragments"
+  206  git push 
+  207  git config --global "credential.helper"
+  208  git config --global "credential.cache" --timeout="36000" 
+  209  git push 
+  210  mvn -DskipTests oc:build oc:resource oc:apply
+  211  oc get cm/confap-hello
+  212  oc get cm
+  213  oc get cm/configmap-hello -o yaml 
+  214  curl http://micro-java-developer-micro-java.apps.ocp4.example.com/api/hello
+  215  oc get pods -w
+  216  history > historial_lab.txt
